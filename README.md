@@ -10,6 +10,8 @@ A Home Assistant custom integration that pushes device tracker location data to 
 
 ### HACS (Recommended)
 
+[![Install repository](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=myakove&repository=reitti-HAIntegration&category=integration)
+
 1. Make sure you have [HACS](https://hacs.xyz/) installed
 2. Go to HACS → Integrations
 3. Click the menu (three dots) in the top right corner
@@ -30,6 +32,8 @@ A Home Assistant custom integration that pushes device tracker location data to 
 ## Configuration
 
 ### Through the UI
+
+[![Add Integration](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=reitti)
 
 1. Go to **Settings** → **Devices & Services**
 2. Click **Add Integration**
