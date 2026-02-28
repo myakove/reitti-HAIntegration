@@ -14,7 +14,7 @@ A Home Assistant custom integration that pushes device tracker location data to 
 2. Go to HACS → Integrations
 3. Click the menu (three dots) in the top right corner
 4. Select "Custom repositories"
-5. Add this repository URL: `https://github.com/karldonteljames/reitti-HAIntegration`
+5. Add this repository URL: `https://github.com/myakove/reitti-HAIntegration`
 6. Set category to "Integration"
 7. Click "Add"
 8. Find "Reitti Integration" in the list and install it
@@ -38,39 +38,44 @@ A Home Assistant custom integration that pushes device tracker location data to 
 
 ### Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Reitti Server URL** | URL of your Reitti server | `http://reitti` |
-| **Port** | Server port | `8080` |
-| **API Key** | Your Reitti API token | *Required* |
-| **Device** | Device tracker to monitor | *Required* |
-| **Push Interval** | Seconds between updates | `30` |
-| **Enable Push** | Enable automatic pushes | `true` |
-| **Debug Logging** | Enable debug logging | `false` |
-| **Friendly Name** | Display name | `Reitti Integration` |
+| Option                | Description               | Default              |
+| --------------------- | ------------------------- | -------------------- |
+| **Reitti Server URL** | URL of your Reitti server | `http://reitti`      |
+| **Port**              | Server port               | `8080`               |
+| **API Key**           | Your Reitti API token     | _Required_           |
+| **Device**            | Device tracker to monitor | _Required_           |
+| **Push Interval**     | Seconds between updates   | `30`                 |
+| **Enable Push**       | Enable automatic pushes   | `true`               |
+| **Debug Logging**     | Enable debug logging      | `false`              |
+| **Friendly Name**     | Display name              | `Reitti Integration` |
 
 ## Features
 
 ### ✅ Automatic Location Pushing
+
 - Pushes location data at configurable intervals
 - Triggers immediate updates when device state changes
 - Supports multiple device trackers with separate integrations
 
 ### ✅ Complete Reconfiguration Support
+
 - Modify ALL settings (URL, API key, device tracker, intervals, etc.) in one form
 - Access via: Integration → Three dots menu → **"Reconfigure"**
 - No need to remove and re-add the integration
 
 ### ✅ Runtime Options
+
 - Quick access to common settings (intervals, debug logging, device tracker)
 - Access via: Integration → Three dots menu → **"Configure"** → **"Options"**
 - No restart required for option changes
 
 ### ✅ Manual Push Service
+
 - `reitti.push_now` service for on-demand location updates
 - Useful for automation and testing
 
 ### ✅ Debug Support
+
 - Comprehensive logging for troubleshooting
 - View request/response data when debug mode is enabled
 
@@ -93,7 +98,7 @@ The integration sends data in OwnTracks format:
   "_type": "location",
   "tid": "AB",
   "lat": 40.7128,
-  "lon": -74.0060,
+  "lon": -74.006,
   "alt": 10,
   "acc": 5,
   "tst": 1703097600
@@ -154,15 +159,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Changelog
 
 ### v1.0.2
+
 - Fixed HACS download issues with zip_release configuration
 - Updated release management for better HACS compatibility
 
 ### v1.0.1
+
 - Added complete reconfiguration support for all options
 - Fixed reconfigure flow to include all settings in one form
 - Enhanced reconfigure to update both config data and options
 
 ### v1.0.0
+
 - Added reconfiguration support
 - Improved options flow with better validation
 - Enhanced error handling
@@ -170,6 +178,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Added device tracker reconfiguration to options flow
 
 ### v0.1.4
+
 - Fixed logging variables
 - Added friendly names for better device identification
 - Made API calls thread-safe
